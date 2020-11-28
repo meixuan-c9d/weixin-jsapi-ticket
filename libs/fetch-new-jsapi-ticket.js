@@ -1,7 +1,7 @@
 const debug = require('../configs/debug')
 const querystring = require('querystring')
 const fetch = require('node-fetch')
-const cacheJSAPITicket = require('../cache-jsapi-ticket')
+const cacheJSAPITicket = require('./cache-jsapi-ticket')
 
 module.exports = async (request, response) => {
   

@@ -1,11 +1,11 @@
 const debug = require('./configs/debug')
-const promisifyAsync = require('./utils/promisify-async')
+const wrap = require('./utils/wrap')
 
 const checkIfLocalJSAPITicketFound = require('./libs/check-if-local-jsapi-ticket-found')
 const fetchLocalJSAPITicket = require('./libs/fetch-local-jsapi-ticket')
 const fetchNewJSAPITicket = require('./libs/fetch-new-jsapi-ticket')
 
-module.exports = promisifyAsync(async (request, response, next) => {
+module.exports = wrap(async (request, response, next) => {
   const {
     sessionId
   } = request.params
