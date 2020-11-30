@@ -9,6 +9,10 @@ module.exports = wrap(async (request, response, next) => {
   const {
     sessionId
   } = request.params
+
+  debug.log(`
+  received sessionId ${sessionId}
+  `)
   
   const ifLocalJSAPITicketFound = await checkIfLocalJSAPITicketFound(sessionId)
 
